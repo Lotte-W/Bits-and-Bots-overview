@@ -1,3 +1,4 @@
-title: My Website
-description: My GitHub Pages site
-theme: minima
+title: My Documentation
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
