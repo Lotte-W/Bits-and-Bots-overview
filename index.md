@@ -1,11 +1,18 @@
-# Welcome!
+---
+title: Home
+nav_order: 1
+---
 
-This is my GitHub Pages website.
+# Welcome 👋
 
-## About
+Hi! I'm **Your Name**.
 
-I built this site using Jekyll.
+I'm documenting my journey through software development, sharing projects I've built, and collecting useful resources.
 
-- Home
-- Projects
-- Contact
+## Explore
+
+- 📖 Learn Python
+- 🌐 Learn Front-End Development
+- 🚀 Creations
+- 🎤 Expert Sessions
+- 📬 Contact
