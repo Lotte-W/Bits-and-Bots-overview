@@ -1,4 +1,4 @@
-# Hi, I'm Alex 👋
+# Bits and Bots Study Group
 
 I'm a developer interested in web, AI, and open source.
 
