@@ -1,18 +1,12 @@
----
-title: Home
-nav_order: 1
----
+# Hi, I'm Alex 👋
 
-# Welcome 👋
+I'm a developer interested in web, AI, and open source.
 
-Hi! I'm **Your Name**.
+## Projects
 
-I'm documenting my journey through software development, sharing projects I've built, and collecting useful resources.
+- Project One
+- Project Two
 
-## Explore
+## Contact
 
-- 📖 Learn Python
-- 🌐 Learn Front-End Development
-- 🚀 Creations
-- 🎤 Expert Sessions
-- 📬 Contact
+- GitHub: yourusername
