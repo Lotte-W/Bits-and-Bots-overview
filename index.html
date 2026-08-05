@@ -124,25 +124,11 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
     display: block;
 }
 
-.section-header {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 50px 40px 20px;
-}
-
-.section-header h1 {
-    margin-bottom: 20px;
-}
-
-.section-header p {
-    margin: 15px 0;
-    line-height: 1.7;
-}
-
 
 /* ---------- Theme ---------- */
 
 :root {
+
     --bg: #F8FBFD;
     --surface: #FFFFFF;
 
@@ -171,25 +157,37 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 
 
 body {
+
     margin: 0;
+
     background: var(--bg);
+
     color: var(--text);
+
     font-family: Inter, Segoe UI, Arial, sans-serif;
+
 }
+
 
 
 /* ---------- Navigation ---------- */
 
 .navbar {
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     height: 70px;
+
     padding: 0 60px;
 
     background: var(--surface);
@@ -197,11 +195,14 @@ body {
     border-bottom: 1px solid var(--border);
 
     backdrop-filter: blur(8px);
+
 }
 
 
 .logo {
+
     display: flex;
+
     align-items: center;
 
     gap: 12px;
@@ -209,35 +210,48 @@ body {
     height: 100%;
 
     font-size: 1.4rem;
+
     font-weight: 700;
+
 }
 
 
 .logo img {
+
     height: 45px;
+
     width: auto;
+
     display: block;
+
 }
 
 
 .logo span {
+
     color: var(--primary);
-    line-height: 1;
+
 }
 
 
+
 .navbar nav {
+
     display: flex;
+
     align-items: center;
 
     height: 100%;
 
     gap: 30px;
+
 }
 
 
 .navbar a {
+
     display: flex;
+
     align-items: center;
 
     height: 100%;
@@ -246,27 +260,56 @@ body {
 
     font-weight: 500;
 
-    line-height: 1;
-
     text-decoration: none;
 
     transition: .2s;
+
 }
 
 
 .navbar a:hover {
+
     color: var(--primary);
+
 }
+
+
+
+/* ---------- General Tags ---------- */
+
+.tag {
+
+    display: inline-block;
+
+    background: var(--primary-light);
+
+    color: var(--primary-dark);
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    font-size: .9rem;
+
+    font-weight: 700;
+
+    letter-spacing: .02em;
+
+    margin-bottom: 20px;
+
+}
+
 
 
 /* ---------- Buttons ---------- */
 
 .button {
+
     display: inline-block;
 
-    margin-top: 45px;
+    margin-top: 30px;
 
-    padding: 16px 30px;
+    padding: 15px 30px;
 
     background: var(--primary);
 
@@ -279,32 +322,39 @@ body {
     text-decoration: none;
 
     transition: .2s;
+
 }
 
 
 .button:hover {
+
     background: var(--primary-dark);
 
     transform: translateY(-2px);
+
 }
+
 
 
 /* ---------- Cards ---------- */
 
 .cards {
+
     width: min(1200px, 95%);
 
     margin: 2rem auto;
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-    gap: 1.5rem;
+    gap: 2rem;
+
 }
 
 
 .card {
+
     background: var(--surface);
 
     border: 1px solid var(--border);
@@ -313,76 +363,117 @@ body {
 
     padding: 1.5rem;
 
-    cursor: pointer;
-
     transition: .2s;
+
 }
 
 
 .card:hover {
+
     transform: translateY(-4px);
 
     border-color: var(--primary);
 
     box-shadow: var(--shadow);
+
 }
+
+
+
+/* ---------- Section Headers ---------- */
+
+.section-header {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 40px 30px;
+
+}
+
+
+.section-header h1 {
+
+    margin: 0 0 20px;
+
+    line-height: 1.2;
+
+}
+
+
+.section-header p {
+
+    max-width: 850px;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+}
+
 
 
 /* ---------- Resources ---------- */
 
 .resources .card {
+
     display: flex;
+
     flex-direction: column;
+
 }
 
 
 .resources .button {
+
     margin-top: auto;
+
     text-align: center;
+
 }
 
 
 .resources strong {
+
     color: var(--secondary);
+
 }
 
 
 .resources .card h2 {
+
     color: var(--secondary);
+
     margin-top: 0;
+
 }
 
-
-.resources .card p {
-    line-height: 1.6;
-}
-
-
-/* ---------- About ---------- */
+/* ---------- About / Team / Contact ---------- */
 
 .about,
 .team,
 .contact {
+
     max-width: 1200px;
+
     margin: auto;
-}
 
-
-.about .hero,
-.team .hero,
-.contact.hero {
-    padding: 50px 40px 30px;
 }
 
 
 .about .cards,
 .team .cards {
+
     margin-top: 2rem;
+
 }
 
 
 .card img {
+
     width: 120px;
+
     height: 120px;
 
     object-fit: cover;
@@ -390,31 +481,40 @@ body {
     border-radius: 50%;
 
     margin-bottom: 1rem;
+
 }
 
 
-/* ---------- Profile ---------- */
+
+/* ---------- Profile Cards ---------- */
 
 .profile-card {
+
     text-align: center;
+
 }
 
 
 .profile-card h2 {
+
     color: var(--primary);
 
     margin-bottom: 1rem;
+
 }
 
 
 .profile-card p {
+
     color: var(--muted);
 
     line-height: 1.6;
+
 }
 
 
 .profile-card a {
+
     display: inline-block;
 
     margin-top: 1rem;
@@ -424,93 +524,22 @@ body {
     font-weight: 600;
 
     text-decoration: none;
+
 }
 
 
 .profile-card a:hover {
-    color: var(--primary-dark);
 
     text-decoration: underline;
+
 }
 
 
-/* ---------- Project Cards ---------- */
 
-.project-card {
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-.project-card img {
-    width: 100%;
-
-    aspect-ratio: 1/1;
-
-    object-fit: contain;
-
-    background: #F8FBFD;
-
-    padding: .5rem;
-
-    border-radius: 10px 10px 0 0;
-}
-
-
-.project-card h2 {
-    margin: .2rem 0;
-
-    color: var(--primary);
-}
-
-
-.author {
-    color: var(--muted);
-
-    font-size: .95rem;
-
-    margin-bottom: 1rem;
-}
-
-
-.project-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: .5rem;
-
-    margin-top: auto;
-
-    margin-bottom: 1.5rem;
-}
-
-
-.project-tags span {
-    background: var(--secondary-light);
-
-    color: var(--secondary-dark);
-
-    padding: .35rem .8rem;
-
-    border-radius: 999px;
-
-    font-size: .85rem;
-
-    font-weight: 600;
-}
-
-
-.project-card .button {
-    margin-top: 0;
-
-    text-align: center;
-}
-
-/* ---------- Homepage Hero Banner ---------- */
+/* ---------- Homepage Hero Video Banner ---------- */
 
 .hero-banner {
+
     position: relative;
 
     overflow: hidden;
@@ -522,48 +551,50 @@ body {
     align-items: center;
 
     border-bottom: 1px solid var(--border);
+
 }
 
 
-/* Background video */
-
 .hero-video {
+
     position: absolute;
 
-    top: 50%;
-    left: 50%;
+    inset: 0;
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    transform: translate(-50%, -50%);
-
     z-index: 0;
+
 }
 
 
-/* Blue/green overlay */
-
 .hero-overlay {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         linear-gradient(
+
             rgba(0,176,240,.75),
+
             rgba(21,128,61,.65)
+
         );
 
     z-index: 1;
+
 }
 
 
-/* Hero text */
-
 .hero-content {
+
     position: relative;
 
     z-index: 2;
@@ -574,22 +605,24 @@ body {
 
     margin: auto;
 
-    padding: 80px 40px 70px;
+    padding: 80px 40px;
 
     color: white;
+
 }
 
 
 .hero-content .tag {
-    background: white;
+
+    background: rgba(255,255,255,.95);
 
     color: var(--secondary);
 
-    margin-bottom: 20px;
 }
 
 
 .hero-content h1 {
+
     max-width: 850px;
 
     font-size: 3.4rem;
@@ -599,10 +632,12 @@ body {
     margin: 15px 0;
 
     color: white;
+
 }
 
 
 .hero-content p {
+
     max-width: 750px;
 
     font-size: 1.15rem;
@@ -611,13 +646,14 @@ body {
 
     color: white;
 
-    margin-top: 20px;
 }
 
 
-/* Call-to-action */
+
+/* Hero Button */
 
 .hero-actions a {
+
     display: inline-block;
 
     margin-top: 30px;
@@ -635,37 +671,44 @@ body {
     text-decoration: none;
 
     transition: .2s;
+
 }
 
 
 .hero-actions a:hover {
+
     background: var(--highlight-light);
 
     transform: translateY(-2px);
+
 }
+
 
 
 /* ---------- Learning Paths ---------- */
 
 .learning-paths {
+
     max-width: 1200px;
 
     margin: auto;
 
     padding: 45px 40px;
+
 }
 
 
 .learning-paths > h2 {
+
     text-align: center;
 
     font-size: 2.2rem;
 
-    margin-bottom: 8px;
 }
 
 
 .section-intro {
+
     text-align: center;
 
     color: var(--muted);
@@ -673,81 +716,77 @@ body {
     font-size: 1.1rem;
 
     margin-bottom: 30px;
+
 }
 
 
-/* ---------- Skill Cards ---------- */
-
 .skill-card {
-    position: relative;
 
     overflow: hidden;
 
-    text-align: left;
 }
 
 
 .skill-icon {
+
     font-size: 2.5rem;
 
     margin-bottom: 1rem;
+
 }
 
 
 .skill-card h2 {
+
     margin-top: 0;
+
 }
 
 
 .skill-card a {
-    display: inline-block;
-
-    margin-top: 1rem;
 
     color: var(--primary);
 
     font-weight: 600;
 
     text-decoration: none;
+
 }
 
-
-.skill-card a:hover {
-    text-decoration: underline;
-}
-
-
-/* Python */
 
 .python-card {
+
     border-top: 5px solid var(--secondary);
+
 }
 
-
-/* Front-end */
 
 .web-card {
+
     border-top: 5px solid var(--primary);
+
 }
 
-
-/* Digital skills */
 
 .tools-card {
+
     border-top: 5px solid var(--highlight);
+
 }
+
 
 
 /* ---------- Community Section ---------- */
 
 .community-section {
+
     background: var(--secondary-light);
 
-    margin-top: 30px;
 }
 
 
 .community-content {
+
     max-width: 1100px;
 
     margin: auto;
@@ -755,17 +794,21 @@ body {
     padding: 50px 40px;
 
     text-align: center;
+
 }
 
 
 .community-content h2 {
-    font-size: 2.2rem;
 
     color: var(--secondary);
+
+    font-size: 2.2rem;
+
 }
 
 
 .community-content p {
+
     max-width: 750px;
 
     margin: 20px auto;
@@ -773,21 +816,23 @@ body {
     color: var(--muted);
 
     line-height: 1.7;
+
 }
 
 
 .community-points {
+
     display: grid;
 
     grid-template-columns: repeat(3,1fr);
 
     gap: 20px;
 
-    margin-top: 30px;
 }
 
 
 .community-points div {
+
     background: white;
 
     padding: 25px;
@@ -796,23 +841,194 @@ body {
 
     box-shadow: var(--shadow);
 
-    line-height: 1.6;
 }
 
 
-.community-points strong {
-    display: block;
 
-    margin: 10px 0;
+/* ---------- Member Creations ---------- */
+
+.creations {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+
+.creations .cards {
+
+    margin-bottom: 5rem;
+
+}
+
+.project-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    min-height: 560px;
+
+}
+
+.project-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: contain;
+
+    background: var(--bg);
+
+    padding: 1rem;
+
+    border-radius: 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-card h2 {
 
     color: var(--primary);
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.destroy();
+
+    font-size: 1.5rem;
+
+    margin: 1.2rem 1.5rem .3rem;
+
+}
+
+
+.project-card p {
+
+    line-height: 1.6;
+
+    margin-left: 1.5rem;
+
+    margin-right: 1.5rem;
+
+}
+
+
+.project-card .author {
+
+    color: var(--muted);
+
+    font-size: .95rem;
+
+}
+
+
+
+/* Project Tags */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .5rem;
+
+    margin-top: auto;
+
+    padding: 0 1.5rem 1.5rem;
+
+}
+
+
+.project-tags span {
+
+    padding: .35rem .8rem;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 600;
+
+}
+
+
+.project-tags span:first-child {
+
+    background: var(--secondary-light);
+
+    color: var(--secondary-dark);
+
+}
+
+
+.project-tags span:nth-child(2) {
+
+    background: var(--highlight-light);
+
+    color: var(--highlight-dark);
+
+}
+
+
+.project-tags span:nth-child(3) {
+
+    background: var(--primary-light);
+
+    color: var(--primary-dark);
+
+}
+
+
+
+.project-card .button {
+
+    margin: 0 1.5rem 1.5rem;
+
+    text-align: center;
+
+}
+
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .community-points {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.destroy();
 </script><tw-passagedata pid="1" name="Home" tags="" position="1100,200" size="100,100">&lt;&lt;nobr&gt;&gt;
 
 &lt;section class=&quot;hero-banner&quot;&gt;
 
-    &lt;video class=&quot;hero-video&quot; autoplay muted playsinline&gt;
-        &lt;source src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/Banner%20(3).mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;video class=&quot;hero-video&quot; autoplay muted playsinline poster=&quot;images/banner-cover.jpg&quot;&gt;
+        &lt;source src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/Banner.mp4&quot; type=&quot;video/mp4&quot;&gt;
     &lt;/video&gt;
 
     &lt;div class=&quot;hero-overlay&quot;&gt;&lt;/div&gt;
@@ -823,15 +1039,8 @@ body {
         &lt;/h1&gt;
 
         &lt;p&gt;
-            We are a community study group helping digital archivists
-            build practical technical skills. Learn Python, web development,
-            GitHub, Markdown, and other tools through hands-on projects
-            and collaborative learning.
+We are a community study group helping GLAM (Galleries, Libraries, Archives, and Museums) professionals build practical digital skills. Learn Python, front-end development, GitHub, Markdown, and other tools through hands-on projects            and collaborative learning.
         &lt;/p&gt;
-
-        &lt;div class=&quot;hero-actions&quot;&gt;
-            &lt;!-- your Twine link here --&gt;
-        &lt;/div&gt;
 
     &lt;/div&gt;
 
@@ -843,7 +1052,7 @@ body {
     &lt;/h2&gt;
 
     &lt;p class=&quot;section-intro&quot;&gt;
-        Build confidence with the tools used in modern digital heritage projects.
+        Build confidence with digital skills as a GLAM professional.
     &lt;/p&gt;
 
 
@@ -1202,9 +1411,11 @@ body {
 
 &lt;/section&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Upcoming" tags="" position="1100,450" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Member creations" tags="" position="1100,575" size="100,100">&lt;&lt;nobr&gt;&gt;
+
 &lt;section class=&quot;creations&quot;&gt;
 
 &lt;div class=&quot;section-header&quot;&gt;
+
     &lt;div class=&quot;tag&quot;&gt;Member Creations&lt;/div&gt;
 
     &lt;h1&gt;Projects created by our community&lt;/h1&gt;
@@ -1215,23 +1426,28 @@ body {
         digital projects using the skills they&#39;ve learned. Explore some of
         their creations below for inspiration and ideas.
     &lt;/p&gt;
+
 &lt;/div&gt;
+
 
 &lt;div class=&quot;cards&quot;&gt;
 
+
     &lt;div class=&quot;card project-card&quot;&gt;
 
-        &lt;img src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/archiveword.png&quot; alt=&quot;Logo&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/archiveword.png&quot;
+             alt=&quot;ArchiveWordPy logo&quot;&gt;
 
         &lt;h2&gt;archiveswordpy&lt;/h2&gt;
 
         &lt;p class=&quot;author&quot;&gt;
-            by Nathan Tallman
+            by archivistnathan
         &lt;/p&gt;
-        &lt;p&gt;
-Guess the archives word in this text-based Python game!
 
-The game ramdomly selects an English archives word from a list derived the ICA Multilingual Archival Terminology (MAT).
+        &lt;p&gt;
+            Guess the archives word in this text-based Python game!
+            The game randomly selects an English archives word from a list
+            derived from the ICA Multilingual Archival Terminology (MAT).
         &lt;/p&gt;
 
         &lt;div class=&quot;project-tags&quot;&gt;
@@ -1248,24 +1464,23 @@ The game ramdomly selects an English archives word from a list derived the ICA M
 
     &lt;/div&gt;
 
+
+
     &lt;div class=&quot;card project-card&quot;&gt;
 
         &lt;img src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/Hangmap.png&quot;
-             alt=&quot;Cover image for Project 2&quot;&gt;
+             alt=&quot;Hangmap cover image&quot;&gt;
 
         &lt;h2&gt;Hangmap&lt;/h2&gt;
 
         &lt;p class=&quot;author&quot;&gt;
-            by Tim Stapel
+            by PhilipEno
         &lt;/p&gt;
+
         &lt;p&gt;
-This game is a variation on the HANGMAN game as found in chapters 7-9 of &#39;Invent Your Own Computer Games with Python, 4th Edition&#39;, by Al Sweigart. It was made as part of the Python learning path of the Bits &amp; Bots Studygroup.
-The program consists of:
-
-   &lt;li&gt; hangmap.py (main program, heavily based on Al Sweigart&#39;s game, with some variations)&lt;/li&gt;
-   &lt;li&gt; aat_terms.py (helper program that is called from hangmap.py, and returns an AAT term and URI)&lt;/li&gt;
-    &lt;li&gt;aat_IDs.csv (a list of AAT IDs, that are used to query the AAT API)&lt;/li&gt;
-
+            This game is a variation on the HANGMAN game as found in
+            chapters 7-9 of &lt;i&gt;Invent Your Own Computer Games with Python,
+            4th Edition&lt;/i&gt; by Al Sweigart. 
         &lt;/p&gt;
 
         &lt;div class=&quot;project-tags&quot;&gt;
@@ -1285,128 +1500,75 @@ The program consists of:
 
     &lt;div class=&quot;card project-card&quot;&gt;
 
-        &lt;img src=&quot;images/projects/project3.jpg&quot;
-             alt=&quot;Cover image for Project 3&quot;&gt;
+        &lt;img src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/MedievalAction.png&quot;
+             alt=&quot;Medieval Action cover image&quot;&gt;
 
-        &lt;h2&gt;Mediaval Action&lt;/h2&gt;
+        &lt;h2&gt;Medieval Action&lt;/h2&gt;
 
         &lt;p class=&quot;author&quot;&gt;
             by EvavandenHurk
         &lt;/p&gt;
 
         &lt;p&gt;
-            A short overview of the project. Keep descriptions to around
-            2–3 sentences so all cards remain a similar height.
-        &lt;/p&gt;
-
-        &lt;div class=&quot;project-tags&quot;&gt;
-            &lt;span&gt;🐍 Python&lt;/span&gt;
-            &lt;span&gt;🌐 Front-end&lt;/span&gt;
-            &lt;span&gt;Interactive&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;a class=&quot;button&quot;
-           href=&quot;PROJECT_URL&quot;
-           target=&quot;_blank&quot;&gt;
-            View Project
-        &lt;/a&gt;
-
-    &lt;/div&gt;
-
-
-    &lt;div class=&quot;card project-card&quot;&gt;
- 
-        &lt;img src=&quot;images/projects/project4.jpg&quot;
-             alt=&quot;Cover image for Project 4&quot;&gt;
-
-        &lt;h2&gt;Project Title&lt;/h2&gt;
-
-        &lt;p class=&quot;author&quot;&gt;
-            by Jane Doe
-        &lt;/p&gt;
-
-        &lt;p&gt;
-            Describe the project and highlight what the creator learned or
-            achieved while building it.
-        &lt;/p&gt;
-
-        &lt;div class=&quot;project-tags&quot;&gt;
-            &lt;span&gt;💡 Digital Skills&lt;/span&gt;
-            &lt;span&gt;Tool&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;a class=&quot;button&quot;
-           href=&quot;PROJECT_URL&quot;
-           target=&quot;_blank&quot;&gt;
-            View Project
-        &lt;/a&gt;
-
-    &lt;/div&gt;
-
-
-    &lt;div class=&quot;card project-card&quot;&gt;
-
-        &lt;img src=&quot;images/projects/project5.jpg&quot;
-             alt=&quot;Cover image for Project 5&quot;&gt;
-
-        &lt;h2&gt;Project Title&lt;/h2&gt;
-
-        &lt;p class=&quot;author&quot;&gt;
-            by Jane Doe
-        &lt;/p&gt;
-
-        &lt;p&gt;
-            A concise summary that tells visitors what the project is about and
-            encourages them to explore it.
-        &lt;/p&gt;
-
-        &lt;div class=&quot;project-tags&quot;&gt;
-            &lt;span&gt;🎤 Expert Session&lt;/span&gt;
-            &lt;span&gt;Workshop&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;a class=&quot;button&quot;
-           href=&quot;PROJECT_URL&quot;
-           target=&quot;_blank&quot;&gt;
-            View Project
-        &lt;/a&gt;
-
-    &lt;/div&gt;
-
-
-    &lt;div class=&quot;card project-card&quot;&gt;
-
-        &lt;img src=&quot;images/projects/project6.jpg&quot;
-             alt=&quot;Cover image for Project 6&quot;&gt;
-
-        &lt;h2&gt;Project Title&lt;/h2&gt;
-
-        &lt;p class=&quot;author&quot;&gt;
-            by Jane Doe
-        &lt;/p&gt;
-
-        &lt;p&gt;
-            Another example project. Replace this card with one of your own
-            community creations.
+            This is Medieval Action, a medieval version of the classic
+            &quot;rock, paper, scissors&quot; game. The game was originally written
+            in Python and later recreated in JavaScript so it could be
+            published without creating an API.
         &lt;/p&gt;
 
         &lt;div class=&quot;project-tags&quot;&gt;
             &lt;span&gt;🌐 Front-end&lt;/span&gt;
             &lt;span&gt;Year 1&lt;/span&gt;
-            &lt;span&gt;Portfolio&lt;/span&gt;
+            &lt;span&gt;Game&lt;/span&gt;
         &lt;/div&gt;
 
         &lt;a class=&quot;button&quot;
-           href=&quot;PROJECT_URL&quot;
+           href=&quot;https://evavandenhurk.github.io/MedievalAction/&quot;
            target=&quot;_blank&quot;&gt;
             View Project
         &lt;/a&gt;
 
     &lt;/div&gt;
 
+
+
+
+    &lt;div class=&quot;card project-card&quot;&gt;
+
+        &lt;img src=&quot;https://raw.githubusercontent.com/Lotte-W/Bits-and-Bots-overview/main/images/BroomyWitch.png&quot;
+             alt=&quot;Broomy Witch cover image&quot;&gt;
+
+        &lt;h2&gt;Broomy Witch&lt;/h2&gt;
+
+        &lt;p class=&quot;author&quot;&gt;
+            by archiveduck
+        &lt;/p&gt;
+
+        &lt;p&gt;
+            A Flappy Bird inspired game where you play as a witch on a broom.
+            Avoid randomized obstacles and enemies, or shoot enemies down
+            with your wand. Score points by flying as far as possible.
+        &lt;/p&gt;
+
+        &lt;div class=&quot;project-tags&quot;&gt;
+            &lt;span&gt;🌐 Front-end&lt;/span&gt;
+            &lt;span&gt;Year 1&lt;/span&gt;
+            &lt;span&gt;Game&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;a class=&quot;button&quot;
+           href=&quot;https://archiveduck.github.io/BroomyWitch/&quot;
+           target=&quot;_blank&quot;&gt;
+            View Project
+        &lt;/a&gt;
+
+    &lt;/div&gt;
+
+
 &lt;/div&gt;
 
 &lt;/section&gt;
+
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
